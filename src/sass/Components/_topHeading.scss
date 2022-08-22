@@ -1,0 +1,32 @@
+.top-heading{
+  color: var(--text-2);
+  background-color: var(--top-bg);
+  padding-bottom: 10rem;
+  .toggle{
+    border-top: 1px solid var(--text-2);
+    margin-top: 20px;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+// ==========================
+// tablet 768px
+// ==========================
+@include tablet{
+  .top-heading{
+    .container{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .toggle{
+      border-top: none;
+      margin-top: 0px;
+      padding: 0px 0;
+      gap: 20px;
+    }
+  }
+}

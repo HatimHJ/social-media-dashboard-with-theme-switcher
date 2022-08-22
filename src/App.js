@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import { useRef } from "react";
+import Followers from "./Components/Followers";
+import Statistic from "./Components/Statistic";
+import SubHeading from "./Components/SubHeading";
+import TopHeading from "./Components/TopHeading";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const themeRef = useRef(null);
+
+	return (
+		<div ref={themeRef} className="all pb-4">
+			<TopHeading themeRef={themeRef} />
+			<Followers />
+			<SubHeading />
+			<Statistic />
+		</div>
+	);
 }
 
 export default App;
